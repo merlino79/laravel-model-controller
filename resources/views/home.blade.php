@@ -23,6 +23,12 @@
            {{ $movies1[0]['title']}}</p>
         
        </div>
+       <div class="col">
+         @foreach ($movies4 as $film )
+           <p>{{ $film['original_title']}}</p>
+         @endforeach
+         
+       </div>
      </div>
    </div>
  </main>

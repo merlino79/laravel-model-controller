@@ -17,12 +17,20 @@ class HomeController extends Controller
     $movies2 = Movie::find(5);
     dump($movies2);
 
-    $movies3 = Movie::where('title', 'like', 'il sil%')->get();
+    $movies3 = Movie::where('title', 'like', 'the%')->get();
     dump($movies3);
+
+    $movies4 = Movie::where('original_title', 'like', 'the%')
+      ->orderBy('original_title')
+      ->get();
+
+      dump($movies4);
 
     $data = [
       'movies' => $movies,
       'movies1' => $movies1,
+      'movies4' => $movies4,
+      
      
       
       
