@@ -10,8 +10,11 @@ class HomeController extends Controller
   {
     $movies = Movie::all();
     //dump($movies);
+    $movies1 = Movie::where('title', 'Pulp Fiction')->get();
+    dump($movies1[0]['title']);
     $data = [
-      'movies' => $movies
+      'movies' => $movies,
+      
     ];
     return view('home', $data);
   }
