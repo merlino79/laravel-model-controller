@@ -18,7 +18,11 @@
            </li>
          @endforeach
        </div>
-       
+       <div class="col">
+         <p>ricerca titolo:
+           {{ $movies1[0]['title']}}</p>
+        
+       </div>
      </div>
    </div>
  </main>
