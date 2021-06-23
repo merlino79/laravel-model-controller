@@ -14,8 +14,12 @@ class HomeController extends Controller
     $movies1 = Movie::where('title', 'Pulp Fiction')->get();
     dump($movies1[0]['title']);
 
-    $movies2 = Movie::find(2);
-    dump($movies2[2]);
+    $movies2 = Movie::find(5);
+    dump($movies2);
+
+    $movies3 = Movie::where('title', 'like', 'il sil%')->get();
+    dump($movies3);
+
     $data = [
       'movies' => $movies,
       'movies1' => $movies1,
